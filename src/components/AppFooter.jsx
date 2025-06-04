@@ -1,6 +1,14 @@
 import style from "./AppFooter.module.css";
 
 function AppFooter() {
+
+    const dcComics = ["characters", "comics", "movies", "tv", "games", "videos", "news"];
+    const shop = ["Shop DC", "Shop DC Collectibles"];
+    const dc = ["Terms Of Use", "Privacy policy (New)", "Ad Choices", "Advertising", "Jobs", "Subscriptions", "Talent Workshops", "CPSC Certificates", "Ratings", "Shop Help", "Contact Us"];
+    const sites = ["DC", "MAD Magazine", "DC Kids", "DC Universe", "DC Power Visa"];
+
+
+
     return (
 
         <footer className={style.footer}>
@@ -11,42 +19,38 @@ function AppFooter() {
                         <div>
                             <ul>
                                 <li><h2>dc comics</h2></li>
-                                <li><a href="#">characters</a></li>
-                                <li><a href="#">comics</a></li>
-                                <li><a href="#">movies</a></li>
-                                <li><a href="#">tv</a></li>
-                                <li><a href="#">games</a></li>
-                                <li><a href="#">videos</a></li>
-                                <li><a href="#">news</a></li>
+                                {dcComics.map((curItem, index) => (
+
+                                    <li key={`fotter-dc_comics ${index}`}><a href="#">{curItem}</a></li>
+                                ))}
                             </ul>
 
                             <ul>
                                 <li><h2>shop</h2></li>
-                                <li><a href="#">Shop DC</a></li>
-                                <li><a href="#">Shop DC Collectibles</a></li>
+                                {shop.map((curItem, index) => (
+
+                                    <li key={`fotter-shop ${index}`}><a href="#">{curItem}</a></li>
+                                ))}
+
                             </ul>
                         </div>
 
                         <ul>
                             <li><h2>dc</h2></li>
-                            <li><a href="#">characters</a></li>
-                            <li><a href="#">comics</a></li>
-                            <li><a href="#">movies</a></li>
-                            <li><a href="#">tv</a></li>
-                            <li><a href="#">games</a></li>
-                            <li><a href="#">videos</a></li>
-                            <li><a href="#">news</a></li>
+                               
+                                {dc.map((curItem, index) => (
+
+                                    <li key={`fotter-dc ${index}`}><a href="#">{curItem}</a></li>
+                                ))}
                         </ul>
 
                         <ul>
                             <li><h2>sites</h2></li>
-                            <li><a href="#">characters</a></li>
-                            <li><a href="#">comics</a></li>
-                            <li><a href="#">movies</a></li>
-                            <li><a href="#">tv</a></li>
-                            <li><a href="#">games</a></li>
-                            <li><a href="#">videos</a></li>
-                            <li><a href="#">news</a></li>
+                              
+                                {sites.map((curItem, index) => (
+
+                                    <li key={`footer-sites ${index}`}><a href="#">{curItem}</a></li>
+                                ))}
                         </ul>
                     </nav>
 
@@ -60,7 +64,7 @@ function AppFooter() {
             {/* footer bottom */}
             <div className={style.footerBottom}>
                 <div className="container">
-                    
+
                     <div className={style.row}>
 
                         <a href="#" className={style.btn}>

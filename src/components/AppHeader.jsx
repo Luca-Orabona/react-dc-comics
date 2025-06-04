@@ -1,22 +1,18 @@
 import style from "./AppHeader.module.css";
 
 function AppHeader() {
+    const navItemsHeader = ["characters", "comics", "movies", "tv", "games", "collectibles", "videos", "fans", "news", "shop"];
+
     return (
         <header>
             <div className="container">
                 <nav className={style.row}>
                     <img src="/dc-logo.png" alt="logo dc-comics" />
                     <ul>
-                        <li><a href="#">characters</a></li>
-                        <li><a href="#">comics</a></li>
-                        <li><a href="#">movies</a></li>
-                        <li><a href="#">tv</a></li>
-                        <li><a href="#">games</a></li>
-                        <li><a href="#">collectibles</a></li>
-                        <li><a href="#">videos</a></li>
-                        <li><a href="#">fans</a></li>
-                        <li><a href="#">news</a></li>
-                        <li><a href="#">shop</a></li>
+                        {navItemsHeader.map((curItems, index) => (
+                            <li key={`item-header ${index}`}><a href="#">{curItems}</a></li>
+
+                        ))}
                     </ul>
                 </nav>
 

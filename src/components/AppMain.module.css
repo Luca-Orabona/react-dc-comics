@@ -1,7 +1,7 @@
 
 
 /* hero section */
-.heroSection {
+.jumbotron {
     background-image: url(/src/assets/img/jumbotron.jpg);
     height: 280px;
     background-repeat: no-repeat;

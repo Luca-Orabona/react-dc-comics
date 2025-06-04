@@ -6,7 +6,7 @@ function AppMain() {
     return (
         <main className={style.main}>
 
-            <section className={style.heroSection}></section>
+            <section className={style.jumbotron}></section>
 
             <SectionCards />
 
