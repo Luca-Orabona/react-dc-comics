@@ -22,6 +22,12 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+/* CUSTOM PROPERTIES */
+:root {
+    --num-column: 6;
+    --g-size: 25px;
+}
+
 /* layout */
 .container {
   width: 80%;

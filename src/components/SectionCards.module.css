@@ -1,0 +1,42 @@
+/* Griglia */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--g-size);
+}
+
+.col {
+    width: calc((100% - (var(--g-size) * (var(--num-column) - 1))) / var(--num-column));
+    text-align: center;
+    margin: 20px 0 10px;
+}
+
+.bgBlack {
+    background-color: black;
+}
+
+.col h5 {
+    color: white;
+    margin-top: 8px;
+}
+
+.col .square {
+    height: 130px;
+    overflow: hidden;
+   
+}
+
+.btn {
+    display: inline-block;
+    background-color: rgb(30, 128, 220);
+    color: white;
+    padding: 5px 35px;
+    margin-bottom: 15px;
+    
+    
+}
+
+.textCenter {
+    text-align: center;
+}
